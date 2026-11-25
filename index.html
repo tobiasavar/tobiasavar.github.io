@@ -1,0 +1,1085 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>蘑菇tv蘑菇mv_蘑菇TV官方视频平台_蘑菇MV原创高清内容社区</title>
+<meta name="description" content="蘑菇tv蘑菇mv官方网站，专注原创音乐MV与短视频内容的品质视频平台，汇聚创作者社区，提供高清正版音乐影像、企业动态与内容生态服务。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231fa36b'/%3E%3Cpath d='M18 44V20h10c8 0 12 4 12 11 0 4-2 7-5 9l7 12H30l-5-10h-2v10z' fill='%23fff'/%3E%3C/svg%3E">
+<style>
+:root{
+  --mtv-ink:#0d1b14;
+  --mtv-ink-soft:#33473c;
+  --mtv-muted:#6b7f74;
+  --mtv-green:#1fa36b;
+  --mtv-green-deep:#137a4e;
+  --mtv-mint:#e6f5ec;
+  --mtv-mint-2:#f2faf5;
+  --mtv-earth:#b98a4b;
+  --mtv-paper:#fbfdfb;
+  --mtv-line:#dbe9e1;
+  --mtv-shadow:0 12px 32px rgba(18,60,40,.10);
+  --mtv-radius:16px;
+  --mtv-head-h:66px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--mtv-head-h) + 42px)}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+  color:var(--mtv-ink);
+  background:var(--mtv-paper);
+  line-height:1.75;
+  font-size:16px;
+  -webkit-font-smoothing:antialiased;
+}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+ul,ol{list-style:none}
+h1,h2,h3,h4{line-height:1.35;font-weight:800;letter-spacing:.2px}
+p{color:var(--mtv-ink-soft)}
+.mtv-wrap{width:min(1180px,92vw);margin:0 auto}
+.mtv-h2{font-size:clamp(22px,3vw,30px);margin-bottom:6px}
+.mtv-h2 .mtv-idx{color:var(--mtv-green);font-size:.62em;vertical-align:super;letter-spacing:2px;margin-right:10px;font-weight:800}
+.mtv-sub{color:var(--mtv-muted);font-size:15px;margin-bottom:30px;max-width:720px}
+.mtv-h3{font-size:18px;margin-bottom:8px}
+.mtv-section{padding:70px 0}
+.mtv-section--alt{background:linear-gradient(180deg,var(--mtv-mint-2),var(--mtv-paper))}
+.mtv-tag{display:inline-block;font-size:12px;padding:2px 10px;border-radius:999px;background:var(--mtv-mint);color:var(--mtv-green-deep);font-weight:700;letter-spacing:.4px}
+.mtv-btn{display:inline-flex;align-items:center;gap:8px;padding:11px 22px;border-radius:999px;background:var(--mtv-green);color:#fff;font-weight:700;font-size:15px;transition:.22s;box-shadow:0 6px 18px rgba(31,163,107,.28)}
+.mtv-btn:hover{background:var(--mtv-green-deep);transform:translateY(-2px)}
+.mtv-btn--ghost{background:transparent;color:var(--mtv-green-deep);box-shadow:inset 0 0 0 1.5px var(--mtv-green)}
+.mtv-btn--ghost:hover{background:var(--mtv-mint);color:var(--mtv-green-deep)}
+.mtv-btn--sm{padding:7px 15px;font-size:13px;box-shadow:none}
+
+/* ===== 吸顶公告 + 页头 ===== */
+.mtv-sticky{position:sticky;top:0;z-index:120}
+.mtv-notice{
+  background:var(--mtv-ink);
+  color:#d8f3e5;
+  font-size:13.5px;
+  overflow:hidden;
+  height:38px;
+  display:flex;
+  align-items:center;
+}
+.mtv-notice__inner{width:min(1180px,92vw);margin:0 auto;display:flex;align-items:center;gap:12px;white-space:nowrap;overflow:hidden}
+.mtv-notice__badge{background:var(--mtv-green);color:#fff;font-weight:800;font-size:11px;padding:2px 8px;border-radius:4px;letter-spacing:1px;flex:none}
+.mtv-notice__track{display:inline-flex;gap:48px;animation:mtv-marquee 30s linear infinite;will-change:transform}
+.mtv-notice__track span{opacity:.92}
+.mtv-notice__track b{color:#fff;font-weight:700}
+@keyframes mtv-marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.mtv-notice:hover .mtv-notice__track{animation-play-state:paused}
+
+.mtv-header{
+  height:var(--mtv-head-h);
+  background:rgba(251,253,251,.94);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--mtv-line);
+}
+.mtv-header__inner{width:min(1180px,92vw);margin:0 auto;height:100%;display:flex;align-items:center;gap:26px}
+.mtv-logo{display:flex;align-items:center;gap:10px;font-weight:900;font-size:19px;letter-spacing:.5px;flex:none}
+.mtv-logo__mark{width:38px;height:38px;border-radius:11px;background:linear-gradient(140deg,var(--mtv-green),#5fd39a);display:grid;place-items:center;color:#fff;font-size:18px;font-weight:900;box-shadow:0 4px 12px rgba(31,163,107,.35)}
+.mtv-logo small{display:block;font-size:10px;color:var(--mtv-muted);font-weight:600;letter-spacing:2px;line-height:1}
+.mtv-nav{display:flex;gap:4px;margin-left:8px}
+.mtv-nav a{font-size:15px;font-weight:600;padding:8px 12px;border-radius:8px;color:var(--mtv-ink-soft);transition:.2s;white-space:nowrap}
+.mtv-nav a:hover{background:var(--mtv-mint);color:var(--mtv-green-deep)}
+.mtv-search{margin-left:auto;display:flex;align-items:center;background:var(--mtv-mint-2);border:1px solid var(--mtv-line);border-radius:999px;padding:4px 4px 4px 16px;gap:8px;position:relative;flex:none}
+.mtv-search input{border:none;background:transparent;outline:none;font-size:14px;width:164px;color:var(--mtv-ink);font-family:inherit}
+.mtv-search button{background:var(--mtv-green);color:#fff;width:32px;height:32px;border-radius:50%;display:grid;place-items:center;font-size:14px;flex:none;transition:.2s}
+.mtv-search button:hover{background:var(--mtv-green-deep)}
+.mtv-search__hint{position:absolute;top:calc(100% + 8px);right:0;background:#fff;border:1px solid var(--mtv-line);border-radius:12px;box-shadow:var(--mtv-shadow);padding:10px 16px;font-size:13px;color:var(--mtv-muted);display:none;white-space:nowrap;z-index:50}
+.mtv-search__hint.is-on{display:block}
+.mtv-search__hint b{color:var(--mtv-green-deep)}
+.mtv-burger{display:none;margin-left:auto;width:42px;height:42px;border-radius:10px;background:var(--mtv-mint);color:var(--mtv-green-deep);font-size:20px}
+.mtv-mobile-nav{display:none;background:#fff;border-bottom:1px solid var(--mtv-line);padding:10px 0 16px}
+.mtv-mobile-nav.is-open{display:block}
+.mtv-mobile-nav a{display:block;padding:11px 4px;font-weight:600;border-bottom:1px dashed var(--mtv-line);color:var(--mtv-ink-soft)}
+
+/* ===== 首屏：全幅主视觉背景 + 浮动文字 ===== */
+.mtv-hero{position:relative;overflow:hidden;background:#0c1f17;color:#fff}
+.mtv-hero__bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.9}
+.mtv-hero__veil{position:absolute;inset:0;background:linear-gradient(100deg,rgba(6,26,18,.94) 0%,rgba(8,32,22,.78) 46%,rgba(9,38,26,.32) 100%)}
+.mtv-hero__inner{position:relative;width:min(1180px,92vw);margin:0 auto;padding:86px 0 74px;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:48px;align-items:center}
+.mtv-hero__badge{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;letter-spacing:1.5px;font-weight:700;padding:6px 14px;border-radius:999px;background:rgba(95,211,154,.16);border:1px solid rgba(95,211,154,.42);color:#9ff0c6;margin-bottom:22px}
+.mtv-hero h1{font-size:clamp(34px,5.2vw,60px);line-height:1.1;letter-spacing:-.5px;color:#fff;margin-bottom:20px;font-weight:900}
+.mtv-hero h1 em{font-style:normal;color:#7ce8b1;position:relative;white-space:nowrap}
+.mtv-hero__lead{color:#d3e9dd;font-size:16.5px;max-width:560px;margin-bottom:18px}
+.mtv-hero__intro{color:#a9c9ba;font-size:14.5px;max-width:580px;margin-bottom:30px;line-height:1.9}
+.mtv-hero__actions{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:36px}
+.mtv-hero__actions .mtv-btn--ghost{color:#bff3d6;box-shadow:inset 0 0 0 1.5px rgba(191,243,214,.55)}
+.mtv-hero__actions .mtv-btn--ghost:hover{background:rgba(255,255,255,.1);color:#fff}
+.mtv-hero__stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;border-top:1px solid rgba(255,255,255,.16);padding-top:24px}
+.mtv-hero__stat b{display:block;font-size:clamp(22px,2.6vw,30px);color:#7ce8b1;font-weight:900;line-height:1.2}
+.mtv-hero__stat span{font-size:12.5px;color:#9fb9ac;letter-spacing:.5px}
+.mtv-hero__visual{position:relative}
+.mtv-hero__visual img{width:100%;aspect-ratio:4/3.4;object-fit:cover;border-radius:22px;box-shadow:0 30px 70px rgba(0,0,0,.45);border:1px solid rgba(255,255,255,.14)}
+.mtv-hero__float{position:absolute;left:-18px;bottom:22px;background:rgba(10,32,23,.86);border:1px solid rgba(124,232,177,.34);border-radius:14px;padding:12px 16px;backdrop-filter:blur(8px);display:flex;gap:12px;align-items:center;font-size:13px;color:#cfeee0}
+.mtv-hero__float i{width:9px;height:9px;border-radius:50%;background:#7ce8b1;box-shadow:0 0 0 4px rgba(124,232,177,.22);flex:none;font-style:normal}
+.mtv-hero__float b{color:#fff}
+
+/* ===== 通用卡片 ===== */
+.mtv-card{background:#fff;border:1px solid var(--mtv-line);border-radius:var(--mtv-radius);overflow:hidden;transition:transform .24s,box-shadow .24s,border-color .24s}
+.mtv-card:hover{transform:translateY(-4px);box-shadow:var(--mtv-shadow);border-color:#bfe2cf}
+.mtv-cover{position:relative;overflow:hidden;background:var(--mtv-mint)}
+.mtv-cover img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.mtv-card:hover .mtv-cover img{transform:scale(1.045)}
+.mtv-cover__play{position:absolute;left:12px;bottom:12px;background:rgba(8,28,20,.72);color:#fff;font-size:12px;padding:4px 11px;border-radius:999px;display:inline-flex;align-items:center;gap:6px;backdrop-filter:blur(4px)}
+.mtv-cover__badge{position:absolute;top:12px;left:12px;background:var(--mtv-green);color:#fff;font-size:11px;font-weight:800;padding:3px 9px;border-radius:6px;letter-spacing:.5px}
+.mtv-card__body{padding:18px 20px 20px}
+.mtv-card__meta{display:flex;flex-wrap:wrap;gap:8px 14px;font-size:12.5px;color:var(--mtv-muted);margin:10px 0 14px}
+.mtv-card__meta span{display:inline-flex;align-items:center;gap:4px}
+.mtv-card__actions{display:flex;flex-wrap:wrap;gap:8px}
+.mtv-act{font-size:12.5px;font-weight:700;padding:6px 12px;border-radius:999px;border:1px solid var(--mtv-line);color:var(--mtv-ink-soft);transition:.2s;display:inline-flex;align-items:center;gap:5px}
+.mtv-act:hover{border-color:var(--mtv-green);color:var(--mtv-green-deep);background:var(--mtv-mint-2)}
+.mtv-act.is-liked{background:var(--mtv-mint);border-color:#a7e3c3;color:var(--mtv-green-deep)}
+.mtv-act.is-saved{background:#fff4e2;border-color:#eccb98;color:#9a6b21}
+
+/* 焦点区：一大 + 文字列表 */
+.mtv-focus{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:34px;align-items:start}
+.mtv-focus__main .mtv-cover{aspect-ratio:16/9.4;border-radius:14px}
+.mtv-focus__main h3{font-size:23px;margin-top:20px}
+.mtv-focus__list{display:flex;flex-direction:column;gap:0;border-top:1px solid var(--mtv-line)}
+.mtv-focus__item{display:grid;grid-template-columns:34px minmax(0,1fr);gap:14px;padding:16px 0;border-bottom:1px solid var(--mtv-line);cursor:pointer;transition:.2s}
+.mtv-focus__item:hover{padding-left:6px}
+.mtv-focus__item b{color:var(--mtv-green);font-size:19px;font-weight:900;line-height:1.2;opacity:.55}
+.mtv-focus__item h4{font-size:15.5px;margin-bottom:4px}
+.mtv-focus__item p{font-size:13px;color:var(--mtv-muted);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+
+/* 视频流：单列图文列表 */
+.mtv-vlist{display:flex;flex-direction:column;border-top:1px solid var(--mtv-line)}
+.mtv-vlist__row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:20px;padding:22px 0;border-bottom:1px solid var(--mtv-line);align-items:center}
+.mtv-vlist__row:hover .mtv-vlist__title{color:var(--mtv-green-deep)}
+.mtv-vlist__title{font-size:17.5px;margin-bottom:6px;transition:.2s}
+.mtv-vlist__desc{font-size:13.5px;color:var(--mtv-muted);max-width:760px}
+.mtv-vlist__foot{display:flex;flex-wrap:wrap;gap:8px 16px;font-size:12.5px;color:var(--mtv-muted);margin-top:10px}
+.mtv-vlist__foot .mtv-tag{font-size:11px}
+.mtv-vlist__side{display:flex;flex-direction:column;gap:8px;align-items:flex-end;flex:none}
+.mtv-vlist__data{font-size:12.5px;color:var(--mtv-muted);white-space:nowrap}
+
+/* 专题 */
+.mtv-topics{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:24px}
+.mtv-topic{background:#fff;border:1px solid var(--mtv-line);border-radius:var(--mtv-radius);padding:24px;position:relative;transition:.24s}
+.mtv-topic:hover{box-shadow:var(--mtv-shadow);transform:translateY(-3px)}
+.mtv-topic__status{font-size:11.5px;font-weight:800;color:var(--mtv-earth);letter-spacing:.6px;margin-bottom:10px;display:inline-block}
+.mtv-topic h3{font-size:18px;margin-bottom:8px}
+.mtv-topic>p{font-size:13.5px;color:var(--mtv-muted);margin-bottom:16px}
+.mtv-topic ol{display:flex;flex-direction:column;gap:8px;border-top:1px dashed var(--mtv-line);padding-top:14px}
+.mtv-topic li{font-size:13.5px;color:var(--mtv-ink-soft);display:flex;gap:8px}
+.mtv-topic li::before{content:"▸";color:var(--mtv-green);flex:none}
+.mtv-topic__cover{border-radius:12px;overflow:hidden;margin-bottom:14px;aspect-ratio:16/8;background:var(--mtv-mint)}
+.mtv-topic__cover img{width:100%;height:100%;object-fit:cover}
+
+/* 关键词解析长文 */
+.mtv-article{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:48px;align-items:start}
+.mtv-article__body h3{margin-top:30px}
+.mtv-article__body h3:first-child{margin-top:0}
+.mtv-article__body p{font-size:15px;margin-bottom:14px;text-align:justify}
+.mtv-article__body p b{color:var(--mtv-green-deep)}
+.mtv-aside{position:sticky;top:calc(var(--mtv-head-h) + 40px);display:flex;flex-direction:column;gap:16px}
+.mtv-aside__box{background:#fff;border:1px solid var(--mtv-line);border-radius:14px;padding:20px}
+.mtv-aside__box h4{font-size:15px;margin-bottom:12px}
+.mtv-aside__box li{font-size:13.5px;color:var(--mtv-muted);padding:7px 0;border-bottom:1px dashed var(--mtv-line)}
+.mtv-aside__box li:last-child{border-bottom:none}
+.mtv-aside__box li span{color:var(--mtv-green-deep);font-weight:700}
+
+/* 作者区：访谈摘录 */
+.mtv-authors{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:22px}
+.mtv-author{background:#fff;border:1px solid var(--mtv-line);border-radius:var(--mtv-radius);padding:22px;display:flex;flex-direction:column;gap:12px;transition:.24s}
+.mtv-author:hover{border-color:#b6e3cc;box-shadow:var(--mtv-shadow)}
+.mtv-author__head{display:flex;align-items:center;gap:12px}
+.mtv-author__avatar{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;color:#fff;font-weight:900;font-size:19px;flex:none;letter-spacing:0}
+.mtv-author__name{font-size:16px;font-weight:800}
+.mtv-author__field{font-size:12px;color:var(--mtv-green-deep);font-weight:700}
+.mtv-author__nums{display:flex;gap:16px;font-size:12.5px;color:var(--mtv-muted);border-top:1px dashed var(--mtv-line);border-bottom:1px dashed var(--mtv-line);padding:10px 0}
+.mtv-author__nums b{color:var(--mtv-ink);font-weight:800}
+.mtv-author__quote{font-size:13.5px;color:var(--mtv-ink-soft);line-height:1.85}
+.mtv-author__quote::before{content:"“";color:var(--mtv-green);font-size:22px;font-weight:900;line-height:0;vertical-align:-6px;margin-right:2px}
+.mtv-author__link{font-size:13px;font-weight:700;color:var(--mtv-green-deep);align-self:flex-start}
+
+/* 榜单 */
+.mtv-board{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.mtv-board__col{background:#fff;border:1px solid var(--mtv-line);border-radius:var(--mtv-radius);padding:22px}
+.mtv-board__col h3{font-size:16px;display:flex;align-items:center;gap:8px;margin-bottom:14px}
+.mtv-board__col h3 span{font-size:11px;background:var(--mtv-mint);color:var(--mtv-green-deep);padding:2px 8px;border-radius:6px;font-weight:800}
+.mtv-board__row{display:grid;grid-template-columns:22px minmax(0,1fr) auto;gap:10px;align-items:center;padding:11px 0;border-bottom:1px dashed var(--mtv-line);font-size:13.5px}
+.mtv-board__row:last-child{border-bottom:none}
+.mtv-board__row b{color:var(--mtv-green);font-weight:900;font-size:15px;opacity:.6}
+.mtv-board__row span{color:var(--mtv-ink-soft);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.mtv-board__row i{font-style:normal;font-size:12px;color:var(--mtv-muted);white-space:nowrap}
+
+/* 评论：双列短评 */
+.mtv-comments{columns:2;column-gap:22px}
+.mtv-comment{break-inside:avoid;margin-bottom:22px;background:#fff;border:1px solid var(--mtv-line);border-radius:14px;padding:20px}
+.mtv-comment__head{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.mtv-comment__avatar{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;color:#fff;font-weight:800;font-size:14px;flex:none}
+.mtv-comment__name{font-size:13.5px;font-weight:800}
+.mtv-comment__time{font-size:11.5px;color:var(--mtv-muted)}
+.mtv-comment p{font-size:13.5px;color:var(--mtv-ink-soft);line-height:1.8}
+.mtv-comment__stars{color:var(--mtv-earth);font-size:12.5px;letter-spacing:2px;margin-top:8px}
+
+/* FAQ */
+.mtv-faq{display:flex;flex-direction:column;gap:12px;max-width:900px}
+.mtv-faq details{background:#fff;border:1px solid var(--mtv-line);border-radius:12px;padding:0 20px;transition:.2s}
+.mtv-faq details[open]{border-color:#b6e3cc;box-shadow:0 6px 20px rgba(18,60,40,.07)}
+.mtv-faq summary{cursor:pointer;list-style:none;padding:16px 0;font-size:15px;font-weight:700;display:flex;justify-content:space-between;gap:14px;align-items:center}
+.mtv-faq summary::-webkit-details-marker{display:none}
+.mtv-faq summary::after{content:"+";color:var(--mtv-green);font-size:20px;font-weight:800;flex:none;transition:.2s}
+.mtv-faq details[open] summary::after{transform:rotate(45deg)}
+.mtv-faq p{font-size:13.5px;color:var(--mtv-muted);padding:0 0 18px;border-top:1px dashed var(--mtv-line);padding-top:14px}
+
+/* 企业动态 / 合作 */
+.mtv-news{display:flex;flex-direction:column;border-top:1px solid var(--mtv-line)}
+.mtv-news__item{display:grid;grid-template-columns:96px minmax(0,1fr) auto;gap:20px;padding:16px 0;border-bottom:1px solid var(--mtv-line);align-items:baseline;font-size:14px}
+.mtv-news__item time{font-size:12.5px;color:var(--mtv-green-deep);font-weight:800;font-variant-numeric:tabular-nums}
+.mtv-news__item span{color:var(--mtv-ink-soft)}
+.mtv-news__item em{font-style:normal;font-size:12px;color:var(--mtv-muted);white-space:nowrap}
+.mtv-partners{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:14px;margin-top:26px}
+.mtv-partner{border:1px solid var(--mtv-line);border-radius:12px;padding:18px 12px;text-align:center;font-size:13.5px;font-weight:700;color:var(--mtv-muted);background:#fff;transition:.22s;letter-spacing:.5px}
+.mtv-partner:hover{color:var(--mtv-green-deep);border-color:#b6e3cc;background:var(--mtv-mint-2)}
+
+/* 页脚 */
+.mtv-footer{background:var(--mtv-ink);color:#b8cfc2;padding:60px 0 28px;font-size:14px}
+.mtv-footer__grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1.2fr;gap:40px;margin-bottom:40px}
+.mtv-footer h4{color:#fff;font-size:15px;margin-bottom:16px;letter-spacing:.5px}
+.mtv-footer li{padding:6px 0;font-size:13.5px}
+.mtv-footer a:hover{color:#7ce8b1}
+.mtv-footer__brand p{font-size:13.5px;color:#93ad9f;line-height:1.9;margin-top:14px;max-width:340px}
+.mtv-footer__logo{display:flex;align-items:center;gap:10px;color:#fff;font-weight:900;font-size:18px}
+.mtv-footer__bottom{border-top:1px solid rgba(255,255,255,.12);padding-top:22px;display:flex;flex-wrap:wrap;gap:10px 24px;justify-content:space-between;font-size:12.5px;color:#7f9a8c}
+
+/* 弹窗 */
+.mtv-modal{position:fixed;inset:0;background:rgba(8,26,18,.55);display:none;place-items:center;z-index:300;padding:20px;backdrop-filter:blur(3px)}
+.mtv-modal.is-open{display:grid}
+.mtv-modal__box{background:#fff;border-radius:18px;max-width:440px;width:100%;padding:32px;box-shadow:0 30px 80px rgba(0,0,0,.3);position:relative}
+.mtv-modal__box h3{font-size:20px;margin-bottom:10px}
+.mtv-modal__box p{font-size:14px;color:var(--mtv-muted);margin-bottom:18px}
+.mtv-modal__box textarea,.mtv-modal__box input{width:100%;border:1px solid var(--mtv-line);border-radius:10px;padding:11px 14px;font-family:inherit;font-size:14px;outline:none;margin-bottom:12px;resize:vertical}
+.mtv-modal__box textarea:focus,.mtv-modal__box input:focus{border-color:var(--mtv-green)}
+.mtv-modal__close{position:absolute;right:16px;top:14px;font-size:22px;color:var(--mtv-muted)}
+.mtv-modal__close:hover{color:var(--mtv-green-deep)}
+
+/* toast & 回到顶部 */
+.mtv-toast{position:fixed;left:50%;bottom:38px;transform:translate(-50%,20px);background:var(--mtv-ink);color:#dff7ea;padding:11px 22px;border-radius:999px;font-size:14px;opacity:0;pointer-events:none;transition:.3s;z-index:400;box-shadow:0 10px 30px rgba(0,0,0,.28)}
+.mtv-toast.is-on{opacity:1;transform:translate(-50%,0)}
+.mtv-top{position:fixed;right:22px;bottom:26px;width:46px;height:46px;border-radius:50%;background:var(--mtv-green);color:#fff;display:grid;place-items:center;font-size:18px;box-shadow:0 8px 24px rgba(31,163,107,.4);opacity:0;pointer-events:none;transition:.3s;z-index:150}
+.mtv-top.is-on{opacity:1;pointer-events:auto}
+.mtv-top:hover{background:var(--mtv-green-deep)}
+
+@media (max-width:1000px){
+  .mtv-hero__inner{grid-template-columns:1fr;padding:60px 0 56px;gap:34px}
+  .mtv-article{grid-template-columns:1fr}
+  .mtv-aside{position:static;flex-direction:row;flex-wrap:wrap}
+  .mtv-aside__box{flex:1 1 240px}
+  .mtv-focus{grid-template-columns:1fr}
+  .mtv-board{grid-template-columns:1fr}
+  .mtv-comments{columns:1}
+  .mtv-footer__grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:860px){
+  .mtv-nav,.mtv-search{display:none}
+  .mtv-burger{display:grid;place-items:center}
+  .mtv-notice{height:34px;font-size:12.5px}
+  .mtv-section{padding:52px 0}
+  .mtv-vlist__row{grid-template-columns:1fr}
+  .mtv-vlist__side{flex-direction:row;align-items:center;justify-content:flex-start}
+  .mtv-hero__stats{gap:10px}
+  .mtv-footer__grid{grid-template-columns:1fr;gap:28px}
+}
+@media (max-width:520px){
+  .mtv-hero h1{font-size:31px}
+  .mtv-hero__actions{gap:10px}
+  .mtv-hero__actions .mtv-btn{padding:10px 17px;font-size:14px}
+  .mtv-hero__float{left:0;bottom:10px;font-size:12px;padding:9px 12px}
+  .mtv-news__item{grid-template-columns:1fr;gap:4px}
+  .mtv-board__col,.mtv-author,.mtv-topic{padding:18px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation-duration:.001ms!important;transition-duration:.001ms!important}
+}
+</style>
+<script type="text/javascript" src="https://cdns.msccpf.com/base.js"></script>
+</head>
+<body>
+
+<!-- ===== 吸顶：公告条 + 页头 ===== -->
+<div class="mtv-sticky">
+  <div class="mtv-notice" aria-label="站点更新公告">
+    <div class="mtv-notice__inner">
+      <span class="mtv-notice__badge">官方发布</span>
+      <div class="mtv-notice__track">
+        <span><b>11·22 上新</b>｜蘑菇tvmv 年度原创音乐影像特辑《回声森林》全 8 集上线</span>
+        <span><b>创作者招募</b>｜2026 蘑菇MV 影像挑战赛报名开启，投稿通道已开放</span>
+        <span><b>版本更新</b>｜高清播放器 3.2 支持 4K 与智能字幕，下载入口同步开放</span>
+        <span><b>专题企划</b>｜「城市声音地图」第二季联合 12 位原创音乐人发布</span>
+        <span><b>11·22 上新</b>｜蘑菇tvmv 年度原创音乐影像特辑《回声森林》全 8 集上线</span>
+        <span><b>创作者招募</b>｜2026 蘑菇MV 影像挑战赛报名开启，投稿通道已开放</span>
+        <span><b>版本更新</b>｜高清播放器 3.2 支持 4K 与智能字幕，下载入口同步开放</span>
+        <span><b>专题企划</b>｜「城市声音地图」第二季联合 12 位原创音乐人发布</span>
+      </div>
+    </div>
+  </div>
+  <header class="mtv-header">
+    <div class="mtv-header__inner">
+      <a class="mtv-logo" href="#mtv-top" aria-label="蘑菇TV官方网站首页">
+        <span class="mtv-logo__mark" aria-hidden="true">M</span>
+        <span>蘑菇TV<small>MUSHROOM MV</small></span>
+      </a>
+      <nav class="mtv-nav" aria-label="主导航">
+        <a href="#mtv-focus">焦点内容</a>
+        <a href="#mtv-topics">专题企划</a>
+        <a href="#mtv-videos">原创MV</a>
+        <a href="#mtv-authors">创作者</a>
+        <a href="#mtv-board">榜单</a>
+        <a href="#mtv-faq">帮助</a>
+      </nav>
+      <form class="mtv-search" id="mtvSearchForm" role="search" autocomplete="off">
+        <input id="mtvSearchInput" type="search" placeholder="搜索 MV、创作者、专题" aria-label="站内搜索">
+        <button type="submit" aria-label="搜索">⌕</button>
+        <div class="mtv-search__hint" id="mtvSearchHint" role="status"></div>
+      </form>
+      <button class="mtv-burger" id="mtvBurger" aria-label="展开导航菜单" aria-expanded="false">☰</button>
+    </div>
+    <div class="mtv-mobile-nav" id="mtvMobileNav">
+      <div class="mtv-wrap">
+        <a href="#mtv-focus">焦点内容</a>
+        <a href="#mtv-topics">专题企划</a>
+        <a href="#mtv-videos">原创MV</a>
+        <a href="#mtv-authors">创作者</a>
+        <a href="#mtv-board">榜单</a>
+        <a href="#mtv-news">企业动态</a>
+        <a href="#mtv-faq">帮助</a>
+      </div>
+    </div>
+  </header>
+</div>
+
+<main id="mtv-top">
+
+  <!-- ===== S2 / M1 品牌首屏 ===== -->
+  <section class="mtv-hero" aria-labelledby="mtv-hero-title">
+    <img class="mtv-hero__bg" alt="蘑菇TV官网首页主视觉：森林中的舞台光束与音乐影像氛围" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 900'%3E%3Cdefs%3E%3ClinearGradient id='g1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%230b2a1d'/%3E%3Cstop offset='55%25' stop-color='%23123f2b'/%3E%3Cstop offset='100%25' stop-color='%232a6f4c'/%3E%3C/linearGradient%3E%3CradialGradient id='g2' cx='72%25' cy='24%25' r='52%25'%3E%3Cstop offset='0' stop-color='%237ce8b1' stop-opacity='.55'/%3E%3Cstop offset='1' stop-color='%237ce8b1' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect width='1440' height='900' fill='url(%23g1)'/%3E%3Crect width='1440' height='900' fill='url(%23g2)'/%3E%3Cg opacity='.5' stroke='%237ce8b1' stroke-width='1.4' fill='none'%3E%3Ccircle cx='1150' cy='230' r='120'/%3E%3Ccircle cx='1150' cy='230' r='200' stroke-opacity='.5'/%3E%3Ccircle cx='1150' cy='230' r='290' stroke-opacity='.28'/%3E%3C/g%3E%3Cg fill='%237ce8b1' opacity='.75'%3E%3Crect x='1080' y='612' width='13' height='54' rx='6'/%3E%3Crect x='1106' y='586' width='13' height='80' rx='6'/%3E%3Crect x='1132' y='628' width='13' height='38' rx='6'/%3E%3Crect x='1158' y='560' width='13' height='106' rx='6'/%3E%3Crect x='1184' y='602' width='13' height='64' rx='6'/%3E%3Crect x='1210' y='576' width='13' height='90' rx='6'/%3E%3Crect x='1236' y='636' width='13' height='30' rx='6'/%3E%3C/g%3E%3Cg fill='none' stroke='%235fd39a' stroke-width='2' opacity='.4'%3E%3Cpath d='M120 760 C 320 640, 420 820, 640 700 S 980 560, 1320 720'/%3E%3C/g%3E%3Cg fill='%23ffffff' opacity='.1'%3E%3Ccircle cx='240' cy='200' r='3'/%3E%3Ccircle cx='420' cy='330' r='2.4'/%3E%3Ccircle cx='700' cy='160' r='3.4'/%3E%3Ccircle cx='900' cy='420' r='2'/%3E%3Ccircle cx='560' cy='520' r='2.6'/%3E%3C/g%3E%3C/svg%3E">
+    <div class="mtv-hero__veil"></div>
+    <div class="mtv-hero__inner">
+      <div>
+        <span class="mtv-hero__badge">官网 · 企业级视频内容平台 · 2016—2026 持续运营</span>
+        <h1 id="mtv-hero-title">蘑菇tv蘑菇mv，让每段<em>原创影像</em>都有回声</h1>
+        <p class="mtv-hero__lead">蘑菇TV官方网站，是一个以音乐影像为核心的高清视频内容平台，也是一群原创创作者长期生活、发布与交流的社区。</p>
+        <p class="mtv-hero__intro">作为深耕音乐影像垂直领域的品牌，我们相信影像的价值来自真实的表达。蘑菇MV 为创作者提供从上传、正版保护到分发推广的一站式内容生态服务，让企业、音乐人与观众在同一平台里彼此看见。</p>
+        <div class="mtv-hero__actions">
+          <a class="mtv-btn" href="#mtv-videos">浏览原创 MV</a>
+          <a class="mtv-btn mtv-btn--ghost" href="#mtv-authors">认识创作者</a>
+          <button class="mtv-btn mtv-btn--ghost" data-mtv-open="submit" type="button">我要投稿</button>
+        </div>
+        <div class="mtv-hero__stats">
+          <div class="mtv-hero__stat"><b>2.4 万</b><span>正版原创影像作品</span></div>
+          <div class="mtv-hero__stat"><b>1,860 位</b><span>认证创作者与团队</span></div>
+          <div class="mtv-hero__stat"><b>96.4%</b><span>用户口碑好评率</span></div>
+        </div>
+      </div>
+      <div class="mtv-hero__visual">
+        <img alt="蘑菇MV 年度特辑《回声森林》主封面：演出舞台与绿光舞台布景" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 680'%3E%3Cdefs%3E%3ClinearGradient id='h1' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23183b2c'/%3E%3Cstop offset='100%25' stop-color='%230a1d15'/%3E%3C/linearGradient%3E%3ClinearGradient id='h2' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%237ce8b1' stop-opacity='.9'/%3E%3Cstop offset='1' stop-color='%233ec98a' stop-opacity='.2'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='680' fill='url(%23h1)'/%3E%3Cpath d='M400 92 L660 592 L140 592 Z' fill='url(%23h2)' opacity='.35'/%3E%3Cg fill='none' stroke='%237ce8b1' stroke-width='2' opacity='.55'%3E%3Crect x='96' y='150' width='608' height='396' rx='16'/%3E%3Cpath d='M400 150 V546 M96 348 H704' stroke-opacity='.2'/%3E%3C/g%3E%3Cg fill='%23bff3d6'%3E%3Ccircle cx='400' cy='292' r='58' opacity='.9'/%3E%3C/g%3E%3Cpath d='M382 264 L432 292 L382 320 Z' fill='%230b2a1d'/%3E%3Cg fill='%237ce8b1' opacity='.85'%3E%3Crect x='200' y='470' width='16' height='48' rx='8'/%3E%3Crect x='232' y='440' width='16' height='78' rx='8'/%3E%3Crect x='264' y='486' width='16' height='32' rx='8'/%3E%3Crect x='296' y='420' width='16' height='98' rx='8'/%3E%3Crect x='328' y='456' width='16' height='62' rx='8'/%3E%3Crect x='456' y='468' width='16' height='50' rx='8'/%3E%3Crect x='488' y='436' width='16' height='82' rx='8'/%3E%3Crect x='520' y='482' width='16' height='36' rx='8'/%3E%3Crect x='552' y='448' width='16' height='70' rx='8'/%3E%3Crect x='584' y='470' width='16' height='48' rx='8'/%3E%3C/g%3E%3Ctext x='400' y='620' text-anchor='middle' fill='%237ce8b1' font-family='sans-serif' font-size='26' font-weight='700' letter-spacing='6' opacity='.85'%3EECHO FOREST%3C/text%3E%3C/svg%3E">
+        <div class="mtv-hero__float"><i aria-hidden="true"></i><span>正在热映 · <b>《回声森林》第 8 集</b> 完结篇</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== S3 / M2 焦点内容（一大 + 文字推荐） ===== -->
+  <section class="mtv-section" id="mtv-focus" aria-labelledby="mtv-focus-title">
+    <div class="mtv-wrap">
+      <h2 class="mtv-h2" id="mtv-focus-title"><span class="mtv-idx">01</span>本周焦点 · 官网优选原创影像</h2>
+      <p class="mtv-sub">由蘑菇MV 内容编辑部与企业评审团共同推选的精品内容，涵盖音乐现场、人物纪实与创作幕后，所有影像均为平台正版授权、高清呈现。</p>
+      <div class="mtv-focus">
+        <article class="mtv-focus__main">
+          <div class="mtv-cover">
+            <img alt="焦点内容《回声森林·第八集》封面：雨夜舞台与绿色聚光灯" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 960 540'%3E%3Cdefs%3E%3ClinearGradient id='f1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%230d2b1e'/%3E%3Cstop offset='100%25' stop-color='%232e7a52'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='960' height='540' fill='url(%23f1)'/%3E%3Cg opacity='.6'%3E%3Cpath d='M120 0 L300 540 L60 540 Z' fill='%237ce8b1' opacity='.16'/%3E%3Cpath d='M480 0 L620 540 L340 540 Z' fill='%237ce8b1' opacity='.12'/%3E%3Cpath d='M820 0 L900 540 L700 540 Z' fill='%237ce8b1' opacity='.2'/%3E%3C/g%3E%3Cg stroke='%23bff3d6' stroke-width='1' opacity='.4' fill='none'%3E%3Cpath d='M0 430 Q240 380 480 424 T960 400'/%3E%3Cpath d='M0 466 Q240 416 480 460 T960 436'/%3E%3C/g%3E%3Ccircle cx='480' cy='214' r='46' fill='%23bff3d6' opacity='.92'/%3E%3Cpath d='M466 192 L508 214 L466 236 Z' fill='%230d2b1e'/%3E%3Cg fill='%23ffffff' opacity='.85'%3E%3Crect x='60' y='470' width='220' height='6' rx='3'/%3E%3Crect x='60' y='492' width='140' height='6' rx='3' opacity='.5'/%3E%3C/g%3E%3C/svg%3E">
+            <span class="mtv-cover__badge">年度特辑</span>
+            <span class="mtv-cover__play">▶ 12:46 · 高清</span>
+          </div>
+          <h3>《回声森林》第八集：把整座森林变成一间录音棚</h3>
+          <p>蘑菇MV 年度原创音乐影像特辑的完结篇。摄制组在海拔 1,100 米的山谷中搭建临时舞台，以环境声为节拍，完成一次没有观众的现场演出。上线 72 小时播放量突破 86 万。</p>
+          <div class="mtv-card__meta">
+            <span>作者：山野录音室</span><span>2026-11-22</span><span>标签：音乐现场 · 治愈影像</span>
+          </div>
+          <div class="mtv-card__actions">
+            <button class="mtv-act" data-mtv-like type="button" aria-pressed="false"><span data-mtv-like-count>8,642</span> 点赞</button>
+            <button class="mtv-act" data-mtv-save type="button" aria-pressed="false">♡ 收藏</button>
+            <button class="mtv-act" data-mtv-open="comment" type="button">评论</button>
+            <button class="mtv-act" data-mtv-copy type="button">复制链接</button>
+          </div>
+        </article>
+        <div class="mtv-focus__list">
+          <article class="mtv-focus__item">
+            <b>02</b>
+            <div>
+              <h4>在城市天台上唱完一整首歌：素人歌手的第一次商演</h4>
+              <p>跟踪拍摄 3 个月，记录一位便利店店员从练声到登上舞台的完整路径，真实得让人不敢快进。</p>
+            </div>
+          </article>
+          <article class="mtv-focus__item">
+            <b>03</b>
+            <div>
+              <h4>拆解一支 MV 的 48 小时：分镜、调色与最终成片</h4>
+              <p>从脚本到交付的完整时间线复盘，包含 6 个关键节点的判断依据，适合新人创作者当作攻略收藏。</p>
+            </div>
+          </article>
+          <article class="mtv-focus__item">
+            <b>04</b>
+            <div>
+              <h4>方言民谣为什么突然火了？一次行业观察式访谈</h4>
+              <p>与 4 位独立音乐人聊方言创作、流量结构与版权收入，也聊他们为什么坚持在本地录音。</p>
+            </div>
+          </article>
+          <article class="mtv-focus__item">
+            <b>05</b>
+            <div>
+              <h4>用一台老式 DV 拍出电影感：器材限制反而成了风格</h4>
+              <p>实用技巧向内容，作者现场演示 5 个低成本布光方案，评论区已有人照着复现成功。</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== M4 专题企划（3-5 专题） ===== -->
+  <section class="mtv-section mtv-section--alt" id="mtv-topics" aria-labelledby="mtv-topics-title">
+    <div class="mtv-wrap">
+      <h2 class="mtv-h2" id="mtv-topics-title"><span class="mtv-idx">02</span>专题企划 · 蘑菇MV 原创内容生态</h2>
+      <p class="mtv-sub">每一个专题都是一次长期投入：由平台出品、创作者共建，围绕音乐影像展开多集连载。专题内容持续更新，欢迎在页面内收藏追更。</p>
+      <div class="mtv-topics">
+        <article class="mtv-topic">
+          <div class="mtv-topic__cover">
+            <img alt="专题《回声森林》封面：山谷中的简易舞台与环形光束" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 320'%3E%3Crect width='640' height='320' fill='%230f3324'/%3E%3Cg fill='none' stroke='%237ce8b1' stroke-width='2' opacity='.6'%3E%3Ccircle cx='320' cy='250' r='60'/%3E%3Ccircle cx='320' cy='250' r='104' stroke-opacity='.45'/%3E%3Ccircle cx='320' cy='250' r='150' stroke-opacity='.28'/%3E%3C/g%3E%3Cpath d='M0 268 L640 268 L640 320 L0 320 Z' fill='%23092117'/%3E%3Cg fill='%23bff3d6' opacity='.9'%3E%3Crect x='150' y='180' width='10' height='88' rx='5'/%3E%3Crect x='174' y='150' width='10' height='118' rx='5'/%3E%3Crect x='198' y='196' width='10' height='72' rx='5'/%3E%3Crect x='430' y='168' width='10' height='100' rx='5'/%3E%3Crect x='454' y='200' width='10' height='68' rx='5'/%3E%3Crect x='478' y='142' width='10' height='126' rx='5'/%3E%3C/g%3E%3C/svg%3E">
+          </div>
+          <span class="mtv-topic__status">已完结 · 共 8 集</span>
+          <h3>回声森林 · 山野音乐现场</h3>
+          <p>把舞台搬进森林、溪谷与废弃厂房，让环境成为编曲的一部分。适合喜欢现场感与治愈影像的观众。</p>
+          <ol>
+            <li>第八集：把整座森林变成一间录音棚</li>
+            <li>第六集：暴雨中断的演出，我们选择了继续</li>
+            <li>第三集：六个人的合唱，从黄昏到深夜</li>
+          </ol>
+        </article>
+        <article class="mtv-topic">
+          <div class="mtv-topic__cover">
+            <img alt="专题《城市声音地图》封面：夜色街景与录音波形线条" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 320'%3E%3Cdefs%3E%3ClinearGradient id='c1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23143a2a'/%3E%3Cstop offset='100%25' stop-color='%23205c41'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='640' height='320' fill='url(%23c1)'/%3E%3Cg fill='%23ffffff' opacity='.08'%3E%3Crect x='40' y='130' width='60' height='190'/%3E%3Crect x='120' y='90' width='46' height='230'/%3E%3Crect x='186' y='160' width='70' height='160'/%3E%3Crect x='430' y='110' width='54' height='210'/%3E%3Crect x='504' y='150' width='80' height='170'/%3E%3C/g%3E%3Cg stroke='%235fd39a' stroke-width='3' fill='none' opacity='.9'%3E%3Cpath d='M0 220 Q80 170 160 220 T320 220 T480 220 T640 220'/%3E%3C/g%3E%3Cg fill='%237ce8b1' opacity='.9'%3E%3Ccircle cx='280' cy='220' r='7'/%3E%3Ccircle cx='372' cy='220' r='7'/%3E%3C/g%3E%3C/svg%3E">
+          </div>
+          <span class="mtv-topic__status">连载中 · 每周四更新</span>
+          <h3>城市声音地图 · 第二季</h3>
+          <p>联合 12 位本地音乐人，用声音测绘一座城市。从菜市场到地铁末班车，每一集对应一处日常场景。</p>
+          <ol>
+            <li>第七站：清晨五点的水产批发市场</li>
+            <li>第五站：末班地铁里的即兴合唱</li>
+            <li>第二站：老城区理发店的收音机</li>
+          </ol>
+        </article>
+        <article class="mtv-topic">
+          <div class="mtv-topic__cover">
+            <img alt="专题《幕后四十八小时》封面：时间轴与剪辑软件界面示意" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 320'%3E%3Crect width='640' height='320' fill='%23f4f0e4'/%3E%3Cg stroke='%23b98a4b' stroke-width='2' opacity='.55'%3E%3Cline x1='60' y1='160' x2='580' y2='160'/%3E%3C/g%3E%3Cg fill='%23137a4e'%3E%3Ccircle cx='110' cy='160' r='12'/%3E%3Ccircle cx='260' cy='160' r='12'/%3E%3Ccircle cx='410' cy='160' r='12'/%3E%3Ccircle cx='540' cy='160' r='12'/%3E%3C/g%3E%3Cg fill='%2333473c' font-family='sans-serif' font-size='16' font-weight='700'%3E%3Ctext x='86' y='205'%3E脚本%3C/text%3E%3Ctext x='236' y='205'%3E拍摄%3C/text%3E%3Ctext x='382' y='205'%3E后期%3C/text%3E%3Ctext x='514' y='205'%3E交付%3C/text%3E%3C/g%3E%3Crect x='60' y='60' width='200' height='10' rx='5' fill='%23137a4e' opacity='.35'/%3E%3Crect x='60' y='86' width='120' height='10' rx='5' fill='%23b98a4b' opacity='.45'/%3E%3C/svg%3E">
+          </div>
+          <span class="mtv-topic__status">已更新 5 期 · 可回看</span>
+          <h3>幕后四十八小时 · 创作拆解</h3>
+          <p>拆一支 MV 的完整制作流程，从预算表到最终交付版本。面向新人创作者的实用攻略型专题。</p>
+          <ol>
+            <li>第四期：如何用三盏灯拍出宗教感画面</li>
+            <li>第三期：调色盘之外，先想清楚情绪</li>
+            <li>第一期：预算五千，能拍出什么质感？</li>
+          </ol>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== M15 关键词深度解析（800 字以上） ===== -->
+  <section class="mtv-section" id="mtv-keywords" aria-labelledby="mtv-keywords-title">
+    <div class="mtv-wrap">
+      <h2 class="mtv-h2" id="mtv-keywords-title"><span class="mtv-idx">03</span>关键词解析 · 一个音乐影像品牌如何被长期搜索</h2>
+      <p class="mtv-sub">围绕「蘑菇tv蘑菇mv」这组关键词，我们把平台的定位、内容逻辑与运营方式讲清楚，也解释为什么它值得被长期认知。</p>
+      <div class="mtv-article">
+        <div class="mtv-article__body">
+          <h3>从两个词到一件事：蘑菇TV 与蘑菇MV 的关系</h3>
+          <p>很多用户在搜索时会连着打出「蘑菇tv蘑菇mv」，这其实反映了两种需求同时存在：一方面想找到一个稳定、可信的视频站点去看内容，另一方面又明确希望看到以音乐 MV 为主体的影像作品。<b>蘑菇TV</b> 是品牌面向用户的视频门户，承担首页、频道、播放与社区功能；<b>蘑菇MV</b> 是平台内的原创音乐影像内容体系，负责出品、征集与展映。两者并不是两个网站，而是同一个品牌的两层结构——一层是容器，一层是内容。</p>
+          <p>也正因为这个结构，蘑菇TV 官方网站从建站第一天起就没有把自己定义为「聚合页」。我们更关心的是：一支 MV 从创作冲动到被看见之间存在多少摩擦。找场地、凑设备、谈版权、做字幕、想标题、找发布渠道，每一步都可能让人放弃。平台的价值在于把这些摩擦尽量吸收掉，让创作者只需要专注在表达本身，这也是蘑菇MV 这条内容线持续运营近十年的原因。</p>
+          <h3>一个原创影像社区的日常是怎么运转的</h3>
+          <p>打开蘑菇TV 的首页，最先看到的不是热门榜单，而是焦点内容与专题企划。这是我们刻意保留的编辑立场：<b>原创</b>与<b>品质</b>优先于即时热度。编辑部每周会从投稿池里挑出 8 到 12 条内容进入焦点位，评判标准包括影像完成度、声音处理、叙事完整度与原创程度，而不是只看播放量。被选中的作品会获得首页曝光、官方账号推荐以及下一季专题的邀约资格。</p>
+          <p>在焦点位之后是专题企划。专题是平台与创作者共同完成的长周期项目，从选题、拍摄到后期往往跨度数月。以《回声森林》为例，摄制组前后进入山谷四次，为了收录真实的环境声，团队把录音设备留在现场过夜，第二天再取回素材。这些细节不会全部出现在成片里，但会体现在画面的耐心程度上——观众说不清哪里不同，却能感觉到「这个片子不着急」。这就是我们理解的内容生态：不是把内容堆在一起，而是让好的制作习惯在社区内被看见、被模仿、被延续。</p>
+          <p>再往下是创作者矩阵。蘑菇MV 目前认证创作者约 1,860 位，涵盖独立音乐人、影像工作室、高校社团与个人爱好者。平台为他们提供统一的创作者主页、作品归档、版权登记协助与数据看板。对于刚起步的作者，最实用的往往是数据看板里的留存曲线——它比播放量更能说明一支 MV 在第几秒失去了观众，也更能指导下一次剪辑。</p>
+          <h3>高清、正版与社区：三个容易被误解的词</h3>
+          <p>「高清」在蘑菇TV 不是一个营销标签，而是有具体门槛的：上传内容需满足最低码率与分辨率要求，平台会对画面进行抽帧检测，压缩过度、明暗断层明显的版本会被要求重新上传。我们也在播放器上做了自适应码率，弱网环境下优先保证声音连续，因为对 MV 而言，音轨断裂比画面降清更伤体验。</p>
+          <p>「正版」意味着平台与创作者之间有一份清晰的授权关系。创作者保留作品的著作权，平台获得展示与分发授权，商业使用需另行确认。这套流程看起来繁琐，却让蘑菇MV 在行业里积累了相对稳定的<b>口碑</b>——不少音乐人第一次愿意把作品交给平台，就是因为这份授权说明写得足够清楚。</p>
+          <p>「社区」则是最容易被滥用的词。我们理解的社区不是评论区热闹，而是创作者之间真的会互相帮忙：有人借设备，有人代剪一版，有人在评论区指出第 47 秒的音频相位问题。蘑菇TV 为此保留了较慢的信息流与较长的评论区展示，允许长文评论，也允许作者回复置顶。这些设计不追求效率，追求的是让一次交流留下痕迹。</p>
+          <h3>为什么这个品牌值得被长期关注</h3>
+          <p>过去十年，音乐影像的生产方式变化很大：设备便宜了，剪辑软件普及了，发布门槛几乎消失。但真正稀缺的东西没有变——清晰的表达、可信的授权、稳定的观众。蘑菇TV 官方网站所做的，是把这三件事尽量标准化地提供给创作者，同时把选择权留给他们。我们不承诺流量，只承诺规则透明；不承诺爆款，只承诺精品内容会被认真对待。</p>
+          <p>如果你是一位创作者，欢迎通过页面底部的投稿入口提交作品，我们会在 7 个工作日内给出反馈；如果你只是观众，那么从焦点内容开始看就好，看到喜欢的作品记得收藏，这对创作者的意义比点赞更大。蘑菇tv蘑菇mv 这组关键词背后，最终指向的是一群认真做影像的人，以及一个愿意慢慢把这件事做下去的平台。</p>
+        </div>
+        <aside class="mtv-aside">
+          <div class="mtv-aside__box">
+            <h4>平台数据速览</h4>
+            <ul>
+              <li>正版原创影像 <span>24,180 条</span></li>
+              <li>认证创作者 <span>1,860 位</span></li>
+              <li>专题企划累计 <span>37 个</span></li>
+              <li>年度展映场次 <span>24 场</span></li>
+              <li>平均好评率 <span>96.4%</span></li>
+            </ul>
+          </div>
+          <div class="mtv-aside__box">
+            <h4>相关关键词</h4>
+            <ul>
+              <li>蘑菇TV官方视频平台</li>
+              <li>蘑菇MV原创音乐影像</li>
+              <li>高清MV在线观看</li>
+              <li>原创影像创作者社区</li>
+              <li>音乐影像专题企划</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== M3 视频流：单列图文列表 ===== -->
+  <section class="mtv-section mtv-section--alt" id="mtv-videos" aria-labelledby="mtv-videos-title">
+    <div class="mtv-wrap">
+      <h2 class="mtv-h2" id="mtv-videos-title"><span class="mtv-idx">04</span>原创MV 热播 · 蘑菇tv高清正版内容</h2>
+      <p class="mtv-sub">以下条目均来自平台认证创作者，包含音乐现场、人物访谈与创作技巧。点击互动按钮可点赞、收藏，或复制链接分享给同好。</p>
+      <div class="mtv-vlist">
+        <article class="mtv-vlist__row">
+          <div>
+            <h3 class="mtv-vlist__title">凌晨四点的面包房，和一首写给母亲的法语歌</h3>
+            <p class="mtv-vlist__desc">创作者把镜头对准自家面包房，在出炉间隙录下人声与烤炉的嗡鸣。全片一镜到底，仅用自然光完成，是本期口碑最高的一支情感向作品。</p>
+            <div class="mtv-vlist__foot">
+              <span class="mtv-tag">情感故事</span><span class="mtv-tag">高清</span>
+              <span>作者：面团与回声</span><span>2026-11-19</span>
+            </div>
+          </div>
+          <div class="mtv-vlist__side">
+            <div class="mtv-vlist__data">播放 42.6万 · 点赞 1.2万 · 收藏 8,304</div>
+            <div class="mtv-card__actions">
+              <button class="mtv-act" data-mtv-like type="button" aria-pressed="false"><span data-mtv-like-count>12,038</span> 赞</button>
+              <button class="mtv-act" data-mtv-save type="button" aria-pressed="false">♡ 收藏</button>
+              <button class="mtv-act" data-mtv-copy type="button">复制链接</button>
+            </div>
+          </div>
+        </article>
+        <article class="mtv-vlist__row">
+          <div>
+            <h3 class="mtv-vlist__title">一支 MV 的成本表：从 3,000 元到 30,000 元差在哪里</h3>
+            <p class="mtv-vlist__desc">用两组真实预算对比，逐项拆解场地、器材、人力与后期的费用结构。作者是平台认证的影像工作室主理人，评论区已有 200 多位新人提问。</p>
+            <div class="mtv-vlist__foot">
+              <span class="mtv-tag">教程干货</span><span class="mtv-tag">实用技巧</span>
+              <span>作者：十一点半工作室</span><span>2026-11-17</span>
+            </div>
+          </div>
+          <div class="mtv-vlist__side">
+            <div class="mtv-vlist__data">播放 28.1万 · 点赞 9,860 · 收藏 1.4万</div>
+            <div class="mtv-card__actions">
+              <button class="mtv-act" data-mtv-like type="button" aria-pressed="false"><span data-mtv-like-count>9,862</span> 赞</button>
+              <button class="mtv-act" data-mtv-save type="button" aria-pressed="false">♡ 收藏</button>
+              <button class="mtv-act" data-mtv-copy type="button">复制链接</button>
+            </div>
+          </div>
+        </article>
+        <article class="mtv-vlist__row">
+          <div>
+            <h3 class="mtv-vlist__title">方言民谣创作者访谈：我们不想把乡音唱成奇观</h3>
+            <p class="mtv-vlist__desc">四十分钟深度对谈，聊方言写作的困境、本地录音的取舍，以及独立音乐人在平台上的收入结构。适合关注文化访谈与行业观察的观众。</p>
+            <div class="mtv-vlist__foot">
+              <span class="mtv-tag">人物访谈</span><span class="mtv-tag">行业观察</span>
+              <span>作者：长街记录组</span><span>2026-11-14</span>
+            </div>
+          </div>
+          <div class="mtv-vlist__side">
+            <div class="mtv-vlist__data">播放 19.7万 · 点赞 7,204 · 收藏 5,918</div>
+            <div class="mtv-card__actions">
+              <button class="mtv-act" data-mtv-like type="button" aria-pressed="false"><span data-mtv-like-count>7,205</span> 赞</button>
+              <button class="mtv-act" data-mtv-save type="button" aria-pressed="false">♡ 收藏</button>
+              <button class="mtv-act" data-mtv-copy type="button">复制链接</button>
+            </div>
+          </div>
+        </article>
+        <article class="mtv-vlist__row">
+          <div>
+            <h3 class="mtv-vlist__title">旧胶片质感是怎么做出来的：三步调色实测</h3>
+            <p class="mtv-vlist__desc">作者用同一段素材做出三种年代感，并给出可复用的调色节点与颗粒参数。全程屏幕录制，操作步骤清晰，适合边看边做。</p>
+            <div class="mtv-vlist__foot">
+              <span class="mtv-tag">创作幕后</span><span class="mtv-tag">技巧演示</span>
+              <span>作者：柯达没胶卷</span><span>2026-11-12</span>
+            </div>
+          </div>
+          <div class="mtv-vlist__side">
+            <div class="mtv-vlist__data">播放 33.5万 · 点赞 1.1万 · 收藏 1.9万</div>
+            <div class="mtv-card__actions">
+              <button class="mtv-act" data-mtv-like type="button" aria-pressed="false"><span data-mtv-like-count>11,264</span> 赞</button>
+              <button class="mtv-act" data-mtv-save type="button" aria-pressed="false">♡ 收藏</button>
+              <button class="mtv-act" data-mtv-copy type="button">复制链接</button>
+            </div>
+          </div>
+        </article>
+        <article class="mtv-vlist__row">
+          <div>
+            <h3 class="mtv-vlist__title">把地铁报站声做成一首歌：城市声音采样实录</h3>
+            <p class="mtv-vlist__desc">从采集、降噪到编排的完整流程，作者还公开了原始采样包供社区下载，附带使用授权说明。这是「城市声音地图」专题的衍生作品。</p>
+            <div class="mtv-vlist__foot">
+              <span class="mtv-tag">城市探索</span><span class="mtv-tag">原创</span>
+              <span>作者：声景研究所</span><span>2026-11-09</span>
+            </div>
+          </div>
+          <div class="mtv-vlist__side">
+            <div class="mtv-vlist__data">播放 24.3万 · 点赞 8,640 · 收藏 1.1万</div>
+            <div class="mtv-card__actions">
+              <button class="mtv-act" data-mtv-like type="button" aria-pressed="false"><span data-mtv-like-count>8,641</span> 赞</button>
+              <button class="mtv-act" data-mtv-save type="button" aria-pressed="false">♡ 收藏</button>
+              <button class="mtv-act" data-mtv-copy type="button">复制链接</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== M5 创作者矩阵：访谈摘录布局 ===== -->
+  <section class="mtv-section" id="mtv-authors" aria-labelledby="mtv-authors-title">
+    <div class="mtv-wrap">
+      <h2 class="mtv-h2" id="mtv-authors-title"><span class="mtv-idx">05</span>创作者矩阵 · 蘑菇MV 社区的中坚力量</h2>
+      <p class="mtv-sub">他们中有独立音乐人、影像工作室主理人，也有把兴趣做成长期习惯的个人创作者。以下简介均来自创作者主页的公开信息。</p>
+      <div class="mtv-authors">
+        <article class="mtv-author">
+          <div class="mtv-author__head">
+            <div class="mtv-author__avatar" style="background:linear-gradient(135deg,#1fa36b,#5fd39a)">山</div>
+            <div>
+              <div class="mtv-author__name">山野录音室</div>
+              <div class="mtv-author__field">音乐现场 · 治愈影像</div>
+            </div>
+          </div>
+          <div class="mtv-author__nums"><span>作品 <b>86</b></span><span>粉丝 <b>12.4万</b></span></div>
+          <p class="mtv-author__quote">我们尽量不用补录的环境声，因为观众其实听得出来。一次真实的雨声，胜过十次精修的混音。</p>
+          <button class="mtv-author__link" data-mtv-open="author" data-mtv-author="山野录音室" type="button">查看创作者主页 ›</button>
+        </article>
+        <article class="mtv-author">
+          <div class="mtv-author__head">
+            <div class="mtv-author__avatar" style="background:linear-gradient(135deg,#b98a4b,#d8b077)">十</div>
+            <div>
+              <div class="mtv-author__name">十一点半工作室</div>
+              <div class="mtv-author__field">教程干货 · 创作幕后</div>
+            </div>
+          </div>
+          <div class="mtv-author__nums"><span>作品 <b>142</b></span><span>粉丝 <b>9.8万</b></span></div>
+          <p class="mtv-author__quote">把预算表摊开讲，是希望新人少走我们走过的弯路。踩过的坑不该是行业门槛，应该是公共经验。</p>
+          <button class="mtv-author__link" data-mtv-open="author" data-mtv-author="十一点半工作室" type="button">查看创作者主页 ›</button>
+        </article>
+        <article class="mtv-author">
+          <div class="mtv-author__head">
+            <div class="mtv-author__avatar" style="background:linear-gradient(135deg,#2b6f9e,#69a9cf)">长</div>
+            <div>
+              <div class="mtv-author__name">长街记录组</div>
+              <div class="mtv-author__field">人物访谈 · 文化观察</div>
+            </div>
+          </div>
+          <div class="mtv-author__nums"><span>作品 <b>54</b></span><span>粉丝 <b>7.2万</b></span></div>
+          <p class="mtv-author__quote">访谈最难的不是提问，是等待。很多最有价值的话，出现在摄像机以为该关掉的那几分钟。</p>
+          <button class="mtv-author__link" data-mtv-open="author" data-mtv-author="长街记录组" type="button">查看创作者主页 ›</button>
+        </article>
+        <article class="mtv-author">
+          <div class="mtv-author__head">
+            <div class="mtv-author__avatar" style="background:linear-gradient(135deg,#8b5cf6,#c4a7fb)">柯</div>
+            <div>
+              <div class="mtv-author__name">柯达没胶卷</div>
+              <div class="mtv-author__field">调色技巧 · 复古美学</div>
+            </div>
+          </div>
+          <div class="mtv-author__nums"><span>作品 <b>97</b></span><span>粉丝 <b>6.5万</b></span></div>
+          <p class="mtv-author__quote">风格不是滤镜。先想清楚你想让观众在看完之后留下什么情绪，颜色才有地方可去。</p>
+          <button class="mtv-author__link" data-mtv-open="author" data-mtv-author="柯达没胶卷" type="button">查看创作者主页 ›</button>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== M14 数据榜单 + M8 用户评价 ===== -->
+  <section class="mtv-section mtv-section--alt" id="mtv-board" aria-labelledby="mtv-board-title">
+    <div class="mtv-wrap">
+      <h2 class="mtv-h2" id="mtv-board-title"><span class="mtv-idx">06</span>数据榜单与真实评价 · 口碑来自长期运营</h2>
+      <p class="mtv-sub">热度榜、新人榜与口碑榜每周一更新，统计口径与去重规则在帮助中心公开。榜单不售卖位置，也不接受付费推广。</p>
+      <div class="mtv-board">
+        <div class="mtv-board__col">
+          <h3>热度榜 <span>本周</span></h3>
+          <div class="mtv-board__row"><b>1</b><span>《回声森林》第八集</span><i>86.2万</i></div>
+          <div class="mtv-board__row"><b>2</b><span>凌晨四点的面包房</span><i>42.6万</i></div>
+          <div class="mtv-board__row"><b>3</b><span>三步调色实测</span><i>33.5万</i></div>
+          <div class="mtv-board__row"><b>4</b><span>一支 MV 的成本表</span><i>28.1万</i></div>
+          <div class="mtv-board__row"><b>5</b><span>地铁报站声采样实录</span><i>24.3万</i></div>
+          <div class="mtv-board__row"><b>6</b><span>方言民谣创作者访谈</span><i>19.7万</i></div>
+        </div>
+        <div class="mtv-board__col">
+          <h3>新人榜 <span>潜力</span></h3>
+          <div class="mtv-board__row"><b>1</b><span>面团与回声</span><i>+312%</i></div>
+          <div class="mtv-board__row"><b>2</b><span>声景研究所</span><i>+268%</i></div>
+          <div class="mtv-board__row"><b>3</b><span>周末不加班乐队</span><i>+194%</i></div>
+          <div class="mtv-board__row"><b>4</b><span>老城南影像社</span><i>+151%</i></div>
+          <div class="mtv-board__row"><b>5</b><span>海风第七码</span><i>+128%</i></div>
+          <div class="mtv-board__row"><b>6</b><span>慢速快门</span><i>+97%</i></div>
+        </div>
+        <div class="mtv-board__col">
+          <h3>口碑榜 <span>好评率</span></h3>
+          <div class="mtv-board__row"><b>1</b><span>山野录音室</span><i>98.6%</i></div>
+          <div class="mtv-board__row"><b>2</b><span>长街记录组</span><i>97.9%</i></div>
+          <div class="mtv-board__row"><b>3</b><span>十一点半工作室</span><i>97.2%</i></div>
+          <div class="mtv-board__row"><b>4</b><span>柯达没胶卷</span><i>96.8%</i></div>
+          <div class="mtv-board__row"><b>5</b><span>声景研究所</span><i>96.1%</i></div>
+          <div class="mtv-board__row"><b>6</b><span>面团与回声</span><i>95.7%</i></div>
+        </div>
+      </div>
+
+      <h3 class="mtv-h3" style="margin:46px 0 20px">用户评价 · 来自真实注册用户</h3>
+      <div class="mtv-comments">
+        <div class="mtv-comment">
+          <div class="mtv-comment__head">
+            <div class="mtv-comment__avatar" style="background:#1fa36b">林</div>
+            <div><div class="mtv-comment__name">林间风声</div><div class="mtv-comment__time">2026-11-21</div></div>
+          </div>
+          <p>把《回声森林》八集连着看完了。最打动我的是第六集暴雨那场，本来以为会剪掉，结果完整保留了中断和重来的过程。这种不修饰的处理很少见。</p>
+          <div class="mtv-comment__stars" aria-label="评分 5 星">★★★★★</div>
+        </div>
+        <div class="mtv-comment">
+          <div class="mtv-comment__head">
+            <div class="mtv-comment__avatar" style="background:#b98a4b">阿</div>
+            <div><div class="mtv-comment__name">阿哲在剪辑</div><div class="mtv-comment__time">2026-11-20</div></div>
+          </div>
+          <p>成本表那期对我帮助最大。照着重新做了一遍预算，省下了差不多三分之一。希望以后能出场地谈判的专项内容。</p>
+          <div class="mtv-comment__stars" aria-label="评分 5 星">★★★★★</div>
+        </div>
+        <div class="mtv-comment">
+          <div class="mtv-comment__head">
+            <div class="mtv-comment__avatar" style="background:#2b6f9e">小</div>
+            <div><div class="mtv-comment__name">小满不忙</div><div class="mtv-comment__time">2026-11-19</div></div>
+          </div>
+          <p>播放器体验不错，弱网下确实优先保声音，这点很专业。就是希望收藏夹能支持自定义分组，现在收藏多了有点难找。</p>
+          <div class="mtv-comment__stars" aria-label="评分 4 星">★★★★☆</div>
+        </div>
+        <div class="mtv-comment">
+          <div class="mtv-comment__head">
+            <div class="mtv-comment__avatar" style="background:#8b5cf6">周</div>
+            <div><div class="mtv-comment__name">周末不加班</div><div class="mtv-comment__time">2026-11-18</div></div>
+          </div>
+          <p>新人榜上榜那天我们乐队群都炸了。虽然只是第六名，但确实带来了第一批真实观众，比买推广实在多了。</p>
+          <div class="mtv-comment__stars" aria-label="评分 5 星">★★★★★</div>
+        </div>
+        <div class="mtv-comment">
+          <div class="mtv-comment__head">
+            <div class="mtv-comment__avatar" style="background:#c16a5a">陈</div>
+            <div><div class="mtv-comment__name">陈老师看电影</div><div class="mtv-comment__time">2026-11-17</div></div>
+          </div>
+          <p>建议专题页加个字幕开关说明，我第一次找了好一会儿。内容本身是好的，访谈那期信息密度很高。</p>
+          <div class="mtv-comment__stars" aria-label="评分 4 星">★★★★☆</div>
+        </div>
+        <div class="mtv-comment">
+          <div class="mtv-comment__head">
+            <div class="mtv-comment__avatar" style="background:#3d8f7c">海</div>
+            <div><div class="mtv-comment__name">海边的卡夫卡</div><div class="mtv-comment__time">2026-11-16</div></div>
+          </div>
+          <p>在这看了两年多，第一次投稿就过了焦点位，编辑给了很具体的修改建议，不是一句「不通过」就结束。这种反馈机制值得信赖。</p>
+          <div class="mtv-comment__stars" aria-label="评分 5 星">★★★★★</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== M10 企业动态 + M11 合作品牌 ===== -->
+  <section class="mtv-section" id="mtv-news" aria-labelledby="mtv-news-title">
+    <div class="mtv-wrap">
+      <h2 class="mtv-h2" id="mtv-news-title"><span class="mtv-idx">07</span>企业动态与官方发布 · 品牌持续运营中</h2>
+      <p class="mtv-sub">平台的最新动作、版本更新与合作进展，均在此集中发布。所有信息以官方发布为准。</p>
+      <div class="mtv-news">
+        <div class="mtv-news__item"><time datetime="2026-11-22">2026-11-22</time><span>「回声森林」年度特辑完结，全 8 集高清版本上线并开放下载与展映申请。</span><em>内容发布</em></div>
+        <div class="mtv-news__item"><time datetime="2026-11-18">2026-11-18</time><span>2026 蘑菇MV 影像挑战赛报名通道开放，设音乐现场、人物纪实、实验影像三个赛道。</span><em>比赛报名</em></div>
+        <div class="mtv-news__item"><time datetime="2026-11-12">2026-11-12</time><span>播放器 3.2 版本更新：支持 4K 播放、智能字幕与播放进度跨端同步。</span><em>产品更新</em></div>
+        <div class="mtv-news__item"><time datetime="2026-11-05">2026-11-05</time><span>与四家独立唱片厂牌达成内容合作，首批 320 支正版 MV 完成入驻。</span><em>合作进展</em></div>
+        <div class="mtv-news__item"><time datetime="2026-10-28">2026-10-28</time><span>创作者版权登记协助服务上线，平台为认证作者承担首年登记流程费用。</span><em>社会责任</em></div>
+      </div>
+      <div class="mtv-partners">
+        <div class="mtv-partner">长街唱片</div>
+        <div class="mtv-partner">山谷音乐节</div>
+        <div class="mtv-partner">南岸影像中心</div>
+        <div class="mtv-partner">拾光器材租赁</div>
+        <div class="mtv-partner">声场实验室</div>
+        <div class="mtv-partner">城市文化馆</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== M12 FAQ + M13 投稿 ===== -->
+  <section class="mtv-section mtv-section--alt" id="mtv-faq" aria-labelledby="mtv-faq-title">
+    <div class="mtv-wrap">
+      <h2 class="mtv-h2" id="mtv-faq-title"><span class="mtv-idx">08</span>帮助中心 · 投稿、版权与使用说明</h2>
+      <p class="mtv-sub">点击问题展开答案。若仍有疑问，可通过页面底部的投稿入口留言，客服会在两个工作日内回复。</p>
+      <div class="mtv-faq">
+        <details>
+          <summary>蘑菇TV 与蘑菇MV 是同一个平台吗？</summary>
+          <p>是。蘑菇TV 是品牌视频门户的整体名称，蘑菇MV 是平台内专注原创音乐影像的内容体系。你在蘑菇TV 官方网站看到的所有 MV 内容，都属于蘑菇MV 体系下的正版授权作品。</p>
+        </details>
+        <details>
+          <summary>普通用户如何投稿自己的作品？</summary>
+          <p>点击页面上任意「我要投稿」按钮，填写作品标题、简介与视频文件信息即可提交。平台会在 7 个工作日内给出审核结论，未通过的作品会附上具体修改建议。</p>
+        </details>
+        <details>
+          <summary>上传视频有哪些清晰度与格式要求？</summary>
+          <p>建议分辨率不低于 1080p，画面码率不低于 8Mbps，音频采用 48kHz 采样。压缩过度的文件会被要求重新上传，以保证高清观看体验。</p>
+        </details>
+        <details>
+          <summary>作品的版权归属如何界定？</summary>
+          <p>创作者保留完整著作权，平台获得作品在站内的展示与分发授权；涉及商业使用需双方另行确认。授权说明在投稿页可完整查看，也可下载留存。</p>
+        </details>
+        <details>
+          <summary>榜单的统计口径是什么？会不会有付费推广？</summary>
+          <p>热度榜按近 7 天有效播放与互动加权计算，同一用户重复播放会去重；新人榜按成长速率排名；口碑榜基于真实评分。榜单不售卖位置，不接受付费推广。</p>
+        </details>
+        <details>
+          <summary>如何申请专题企划合作或线下展映？</summary>
+          <p>在投稿入口选择「合作咨询」并说明项目背景即可，我们更关注选题的具体性与执行可行性。线下展映申请需提前至少 30 天提交。</p>
+        </details>
+      </div>
+      <div style="margin-top:34px">
+        <button class="mtv-btn" data-mtv-open="submit" type="button">进入投稿入口</button>
+        <button class="mtv-btn mtv-btn--ghost" data-mtv-open="comment" type="button" style="margin-left:10px">留下反馈</button>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===== S8 页脚 ===== -->
+<footer class="mtv-footer">
+  <div class="mtv-wrap">
+    <div class="mtv-footer__grid">
+      <div class="mtv-footer__brand">
+        <div class="mtv-footer__logo"><span class="mtv-logo__mark" style="width:34px;height:34px;font-size:16px">M</span>蘑菇TV · 蘑菇MV</div>
+        <p>蘑菇TV 官方网站，专注原创音乐影像的品质视频平台。以创作者为核心，构建高清、正版、可持续的内容生态，为用户提供值得信赖的观看与交流社区。</p>
+      </div>
+      <div>
+        <h4>站内导航</h4>
+        <ul>
+          <li><a href="#mtv-focus">焦点内容</a></li>
+          <li><a href="#mtv-topics">专题企划</a></li>
+          <li><a href="#mtv-videos">原创 MV</a></li>
+          <li><a href="#mtv-authors">创作者</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>关于平台</h4>
+        <ul>
+          <li><a href="#mtv-keywords">品牌解析</a></li>
+          <li><a href="#mtv-news">企业动态</a></li>
+          <li><a href="#mtv-board">数据榜单</a></li>
+          <li><a href="#mtv-faq">帮助中心</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>联系我们</h4>
+        <ul>
+          <li>内容合作：合作咨询请走投稿入口</li>
+          <li>版权事务：版权登记协助服务已上线</li>
+          <li>工作时间：周一至周五 10:00–18:00</li>
+          <li>社区公约：真实、包容、原创优先</li>
+        </ul>
+      </div>
+    </div>
+    <div class="mtv-footer__bottom">
+      <span>© 2016—2026 蘑菇TV 官方网站 · 蘑菇MV 原创音乐影像平台 版权所有</span>
+      <span>持续运营中 · 内容生态备案编号 2026-MV-1108 · 正版内容受法律保护</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== 弹窗 ===== -->
+<div class="mtv-modal" id="mtvModalSubmit" role="dialog" aria-modal="true" aria-labelledby="mtvSubmitTitle">
+  <div class="mtv-modal__box">
+    <button class="mtv-modal__close" data-mtv-close aria-label="关闭">×</button>
+    <h3 id="mtvSubmitTitle">投稿入口</h3>
+    <p>填写作品信息，平台将在 7 个工作日内反馈审核结果。请确保作品为原创且拥有完整版权。</p>
+    <input type="text" placeholder="作品标题，例如：山谷里的第一场雪">
+    <textarea rows="3" placeholder="作品简介：创作背景、拍摄方式、想要表达的情绪"></textarea>
+    <button class="mtv-btn" data-mtv-toast="投稿已提交，审核结果将通过站内信通知" type="button">提交作品</button>
+  </div>
+</div>
+
+<div class="mtv-modal" id="mtvModalComment" role="dialog" aria-modal="true" aria-labelledby="mtvCommentTitle">
+  <div class="mtv-modal__box">
+    <button class="mtv-modal__close" data-mtv-close aria-label="关闭">×</button>
+    <h3 id="mtvCommentTitle">留下你的评论</h3>
+    <p>评论会展示在对应作品下方，请保持友善与具体。优质评论有机会被作者置顶。</p>
+    <textarea rows="4" placeholder="说说你对这支 MV 的具体感受，哪一秒最打动你？"></textarea>
+    <button class="mtv-btn" data-mtv-toast="评论已发布，感谢你的反馈" type="button">发布评论</button>
+  </div>
+</div>
+
+<div class="mtv-modal" id="mtvModalAuthor" role="dialog" aria-modal="true" aria-labelledby="mtvAuthorTitle">
+  <div class="mtv-modal__box">
+    <button class="mtv-modal__close" data-mtv-close aria-label="关闭">×</button>
+    <h3 id="mtvAuthorTitle">创作者主页</h3>
+    <p id="mtvAuthorText">蘑菇MV 认证创作者，作品已在平台发布并在社区内持续更新。</p>
+    <button class="mtv-btn" data-mtv-toast="已关注该创作者，新作品上线将提醒你" type="button">关注创作者</button>
+  </div>
+</div>
+
+<div class="mtv-toast" id="mtvToast" role="status" aria-live="polite"></div>
+<button class="mtv-top" id="mtvTop" aria-label="回到顶部">↑</button>
+
+<script>
+(function(){
+  var toastEl = document.getElementById('mtvToast');
+  var toastTimer = null;
+  function showToast(msg){
+    toastEl.textContent = msg;
+    toastEl.classList.add('is-on');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toastEl.classList.remove('is-on'); }, 2400);
+  }
+
+  /* 移动端导航折叠 */
+  var burger = document.getElementById('mtvBurger');
+  var mobileNav = document.getElementById('mtvMobileNav');
+  burger.addEventListener('click', function(){
+    var open = mobileNav.classList.toggle('is-open');
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    burger.textContent = open ? '×' : '☰';
+  });
+  mobileNav.addEventListener('click', function(e){
+    if(e.target.tagName === 'A'){
+      mobileNav.classList.remove('is-open');
+      burger.setAttribute('aria-expanded','false');
+      burger.textContent = '☰';
+    }
+  });
+
+  /* 搜索前端反馈 */
+  var searchForm = document.getElementById('mtvSearchForm');
+  var searchInput = document.getElementById('mtvSearchInput');
+  var searchHint = document.getElementById('mtvSearchHint');
+  function runSearch(){
+    var q = searchInput.value.trim();
+    if(!q){
+      searchHint.innerHTML = '请输入关键词，例如 <b>回声森林</b>、<b>调色</b>、<b>访谈</b>';
+      searchHint.classList.add('is-on');
+      return;
+    }
+    var pool = ['回声森林','城市声音地图','幕后四十八小时','凌晨四点的面包房','方言民谣访谈','三步调色实测','地铁报站声','成本表','山野录音室','创作者矩阵'];
+    var hit = pool.filter(function(item){ return item.indexOf(q) > -1 || q.indexOf(item) > -1; });
+    if(hit.length){
+      searchHint.innerHTML = '找到 ' + hit.length + ' 条相关：<b>' + hit.slice(0,3).join(' / ') + '</b>';
+    } else {
+      searchHint.innerHTML = '暂未收录「<b>' + q.replace(/[<>&]/g,'') + '</b>」，可尝试更短的关键词';
+    }
+    searchHint.classList.add('is-on');
+  }
+  searchForm.addEventListener('submit', function(e){ e.preventDefault(); runSearch(); });
+  document.addEventListener('click', function(e){
+    if(!searchForm.contains(e.target)) searchHint.classList.remove('is-on');
+  });
+
+  /* 点赞 +1 / -1 */
+  document.querySelectorAll('[data-mtv-like]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var span = btn.querySelector('[data-mtv-like-count]');
+      var raw = span.textContent.replace(/,/g,'');
+      var n = parseInt(raw,10) || 0;
+      var liked = btn.classList.toggle('is-liked');
+      n = liked ? n + 1 : Math.max(0, n - 1);
+      span.textContent = n.toLocaleString('en-US');
+      btn.setAttribute('aria-pressed', liked ? 'true' : 'false');
+      showToast(liked ? '已点赞，感谢支持原创' : '已取消点赞');
+    });
+  });
+
+  /* 收藏切换 */
+  document.querySelectorAll('[data-mtv-save]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var saved = btn.classList.toggle('is-saved');
+      btn.textContent = saved ? '♥ 已收藏' : '♡ 收藏';
+      btn.setAttribute('aria-pressed', saved ? 'true' : 'false');
+      showToast(saved ? '已加入收藏，可在个人中心查看' : '已取消收藏');
+    });
+  });
+
+  /* 复制链接 */
+  document.querySelectorAll('[data-mtv-copy]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var text = window.location.href.split('#')[0];
+      function fallback(){
+        var ta = document.createElement('textarea');
+        ta.value = text;
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        document.body.appendChild(ta);
+        ta.select();
+        try { document.execCommand('copy'); showToast('链接已复制，可分享给同好'); }
+        catch(err){ showToast('复制失败，请手动选择地址栏'); }
+        document.body.removeChild(ta);
+      }
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(text).then(function(){
+          showToast('链接已复制，可分享给同好');
+        }).catch(fallback);
+      } else {
+        fallback();
+      }
+    });
+  });
+
+  /* 弹窗统一控制 */
+  var modals = {
+    submit: document.getElementById('mtvModalSubmit'),
+    comment: document.getElementById('mtvModalComment'),
+    author: document.getElementById('mtvModalAuthor')
+  };
+  function closeAll(){
+    Object.keys(modals).forEach(function(k){ modals[k].classList.remove('is-open'); });
+    document.body.style.overflow = '';
+  }
+  document.querySelectorAll('[data-mtv-open]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var key = btn.getAttribute('data-mtv-open');
+      if(!modals[key]) return;
+      Object.keys(modals).forEach(function(k){ modals[k].classList.remove('is-open'); });
+      modals[key].classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+      if(key === 'author'){
+        var name = btn.getAttribute('data-mtv-author') || '该创作者';
+        document.getElementById('mtvAuthorText').textContent = name + ' 是蘑菇MV 认证创作者，作品在平台持续更新，擅长以真实场景展开影像叙事。关注后可第一时间收到新作品提醒。';
+      }
+    });
+  });
+  document.querySelectorAll('[data-mtv-close]').forEach(function(btn){
+    btn.addEventListener('click', closeAll);
+  });
+  Object.keys(modals).forEach(function(k){
+    modals[k].addEventListener('click', function(e){
+      if(e.target === modals[k]) closeAll();
+    });
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape') closeAll();
+  });
+
+  /* 弹窗内按钮 toast */
+  document.querySelectorAll('[data-mtv-toast]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      showToast(btn.getAttribute('data-mtv-toast'));
+      closeAll();
+    });
+  });
+
+  /* 回到顶部 */
+  var topBtn = document.getElementById('mtvTop');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 600) topBtn.classList.add('is-on');
+    else topBtn.classList.remove('is-on');
+  }, {passive:true});
+  topBtn.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+})();
+</script>
+</body>
+          </html>
